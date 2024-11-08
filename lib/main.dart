@@ -17,7 +17,6 @@ class TodoApp extends StatelessWidget {
       darkTheme: AppThemes.appThemeData[AppTheme.darkTheme],
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: ,
           title: const Text('TODO APP'),
         ),
         body: const Center(
