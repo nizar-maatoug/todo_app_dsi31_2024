@@ -12,7 +12,7 @@ class TodoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
-      theme: ThemeData.light(),
+      theme: ThemeData(fontFamily: 'Montserrat', brightness: Brightness.light),
       darkTheme: ThemeData.dark(),
       home: const Scaffold(
         body: Center(
