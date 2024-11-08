@@ -10,12 +10,15 @@ enum AppTheme {
 class AppThemes {
   static final appThemeData = {
     AppTheme.lightTheme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: ColorManager.seedColorLight),
-        fontFamily: FontConstants.fontFamily),
+      useMaterial3: true,
+      colorSchemeSeed: ColorManager.seedColorLight,
+      
+      fontFamily: FontConstants.fontFamily,
+    ),
     AppTheme.darkTheme: ThemeData(
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: ColorManager.seedColorDark),
+        useMaterial3: true,
+        colorSchemeSeed: ColorManager.seedColorDark,
+        brightness: Brightness.dark,
         fontFamily: FontConstants.fontFamily),
   };
 }
