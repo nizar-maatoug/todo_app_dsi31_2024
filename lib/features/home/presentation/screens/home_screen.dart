@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app/core/themes/theme_manager.dart';
 import 'package:todo_app/features/home/presentation/blocs/switch_theme/switchtheme_bloc.dart';
-import 'package:todo_app/features/home/presentation/widgets/toolbar_action_widget.dart';
+import 'package:todo_app/features/home/presentation/widgets/toolbar_action_theme_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -21,23 +21,7 @@ class HomeScreen extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             title: const Text('TODO APP'),
-            actions: [
-              state.themeValue
-                  ? const ActionButton(
-                      icon: Icon(
-                        Icons.light_mode,
-                        size: 26.0,
-                      ),
-                      themeValue: true,
-                    )
-                  : const ActionButton(
-                      icon: Icon(
-                        Icons.dark_mode,
-                        size: 26.0,
-                      ),
-                      themeValue: false,
-                    ),
-            ],
+            actions: [ActionThemeButton(themeValue: state.themeValue)],
           ),
           body: const Center(
             child: Text('TODO APP'),
