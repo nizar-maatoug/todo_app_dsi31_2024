@@ -13,9 +13,13 @@ class TodoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SwitchthemeBloc(),
-      child:  const HomeScreen(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => SwitchthemeBloc(),
+        )
+      ],
+      child: const HomeScreen(),
     );
   }
 }
