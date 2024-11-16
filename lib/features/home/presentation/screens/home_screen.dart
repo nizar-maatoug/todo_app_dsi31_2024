@@ -4,9 +4,12 @@ import 'package:todo_app/core/themes/theme_manager.dart';
 import 'package:todo_app/features/home/presentation/blocs/switch_theme/switchtheme_bloc.dart';
 import 'package:todo_app/navigation/app_router.dart';
 
+import '../../../../../injection_container.dart' as di;
+
 class HomeScreen extends StatelessWidget {
+
   const HomeScreen({
-    super.key,
+    super.key,   
   });
 
   @override
@@ -18,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         theme: state.themeValue
             ? AppThemes.appThemeData[AppTheme.lightTheme]
             : AppThemes.appThemeData[AppTheme.darkTheme],
-        routerConfig: AppRouter().router,
+        routerConfig: di.sl<AppRouter>().router,
       );
     });
   }
