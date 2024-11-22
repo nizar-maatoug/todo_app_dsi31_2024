@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/features/home/presentation/widgets/toolbar_action_theme_widget.dart';
+import 'package:go_router/go_router.dart';
+import 'package:todo_app/features/tasks/presentation/widgets/toolbar_action_theme_widget.dart';
 
 class TasksScreen extends StatelessWidget {
   const TasksScreen({super.key});
@@ -9,11 +10,12 @@ class TasksScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('TODO APP'),
-        actions: [ActionThemeButton()],
+        actions: const [
+          ActionThemeButton(),
+        ],
       ),
-      body: const Center(child: Text('Tasks Screen')),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => GoRouter.of(context).goNamed('login'),
         child: const Icon(Icons.add),
       ),
     );

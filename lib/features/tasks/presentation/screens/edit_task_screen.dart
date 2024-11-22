@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/features/tasks/presentation/widgets/toolbar_action_theme_widget.dart';
 
-class AddTaskScreen extends StatelessWidget {
-  const AddTaskScreen({super.key});
+class EditTaskScreen extends StatelessWidget {
+  final String? id;
+  
+  const EditTaskScreen({super.key, this.id});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ADD TASK'),
+        title: const Text('Edit TASK'),
         actions: const [
           ActionThemeButton(),
         ],
